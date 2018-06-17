@@ -1,8 +1,8 @@
 from Crypto.Cipher import AES
 
 
-counter = "^SdppLtD$."*16 # if you change the counter or key you can't decrypt something you had with a another key or counter
-key = "^SdppLtD$."*32
+counter = "counter"*16 # if you change the counter or key you can't decrypt something you had with a another key or counter
+key = "key"*32
 
 def encrypt(message):
     encrypto = AES.new(key, AES.MODE_CTR, counter=lambda: counter)
